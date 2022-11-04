@@ -1,11 +1,16 @@
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css';
+import { Home } from "./components/Home";
+import { PostPage } from "./components/PostPage";
 
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline text-red-600">
-    Simple React Typescript Tailwind Sample
-  </h1>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/post" element={<PostPage />} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 
