@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { DarkMode } from "./DarkMode";
 import { connect } from "react-redux";
 import userEvent from "@testing-library/user-event";
+import img from "../assets/headshot.jpg";
+import { NONAME } from "dns";
 
 type Item = {
     userId: number,
@@ -29,27 +31,27 @@ export const Home = () => {
 
     return (
         <div className="big-container bgcolor">
-            <div>
+            <div className="header-container1">
                 <h1 className="header">Overreacted</h1>
                 <DarkMode />
             </div>
-            <div>
-                <img />
-                <div>
-                    <p>Personal blog by <a href="https://mobile.twitter.com/dan_abramov">Dan Abramov</a>.</p>
+            <div className="header-container2">
+                <img className="headshot" src={img}/>
+                <div className="header-small">
+                    <p>Personal blog by <a href="https://mobile.twitter.com/dan_abramov" className="header-a">Dan Abramov</a>.</p>
                     <p>I explain with words and code.</p>
                 </div>
             </div>
             {info.map((item: Item) =>
-                <div>
-                    <Link to={`/post/${item.id}`}>
-                        <div key={item.id}>{item.title}</div>
+                <div className="home-post">
+                    <Link to={`/post/${item.id}`} className="blog-link">
+                        <div className="blog-title" key={item.id}>{item.title}</div>
                     </Link>
-                    <div>
+                    <div className="home-time">
                         <div>{new Date(dateString - item.id * 1000 * 3600 * 24).toLocaleDateString('default', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
-                        <div>{Math.ceil(Math.random() * item.userId)} min read</div>
+                        <div className="home-read">{Math.ceil(Math.random() * item.userId)} min read</div>
                     </div>
-                    <div>{item.body}</div>
+                    <div className="home-body">{item.body}</div>
                 </div>
             )}
         </div>
