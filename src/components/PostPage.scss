@@ -1,0 +1,46 @@
+@use "../styles/typography" as *;
+
+.post{
+
+    &-background {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%; 
+
+    }
+
+    &-big-container {
+    height: 100vh; 
+    width: 100%; 
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    font-family: "Poppin";
+}
+    &-container {
+        width: 24%; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-button {
+        background-color: #2b83b9;
+        border-color: #2b83b9;
+        border-radius: 50px;
+        color: white;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+}
+
+.post-page {
+    width: 25%; 
+    padding: 3rem; 
+}
