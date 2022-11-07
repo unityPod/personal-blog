@@ -79,3 +79,25 @@
         font-weight: bold; 
     }
 }
+
+footer {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+    width: 25%; 
+    padding-top: 2rem; 
+}
+
+.footer-small {
+    display: flex;
+    flex-direction: row;
+    }
+
+a {
+    color:#C71585;
+    padding: 0.25rem;  
+
+    &:hover{
+        text-decoration: none;
+    }
+}
