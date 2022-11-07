@@ -10,7 +10,7 @@ Follow these steps to setup and run a local instance of personal-blog
 Run `npm install` from inside the client directory with the following code 
 
 ```
-   $ cd personal
+   $ cd personal-blog
    $ npm install
  ```
     
