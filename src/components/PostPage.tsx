@@ -41,6 +41,7 @@ export const PostPage = () => {
                         <div>{new Date(dateString - item.id * 1000 * 3600 * 24).toLocaleDateString('default', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
                     </div>
                     <div className="home-body">{item.body}</div>
+                    
                 </div>
             )}</div>
         </div>

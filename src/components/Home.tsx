@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { DarkMode } from "./DarkMode";
 import { Footer } from "./Footer";
 import img from "../assets/headshot.jpg";
+import { TbCoffee } from "react-icons/tb";
 
 type Item = {
     userId: number,
@@ -47,6 +48,9 @@ export const Home = () => {
                     </Link>
                     <div className="home-time">
                         <div>{new Date(dateString - item.id * 1000 * 3600 * 24).toLocaleDateString('default', { month: 'long', day: 'numeric', year: 'numeric' })}</div>
+                        {[...Array(Math.ceil(Math.random() * item.userId))].map((ima: Item) => 
+                        <TbCoffee className="coffee-cup"/>
+                        )}
                         <div className="home-read">{Math.ceil(Math.random() * item.userId)} min read</div>
                     </div>
                     <div className="home-body">{item.body}</div>
