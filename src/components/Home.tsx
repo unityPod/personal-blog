@@ -3,10 +3,8 @@ import "./Home.scss";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { DarkMode } from "./DarkMode";
-import { connect } from "react-redux";
-import userEvent from "@testing-library/user-event";
+import { Footer } from "./Footer";
 import img from "../assets/headshot.jpg";
-import { NONAME } from "dns";
 
 type Item = {
     userId: number,
@@ -54,16 +52,7 @@ export const Home = () => {
                     <div className="home-body">{item.body}</div>
                 </div>
             )}
-            <footer>
-                <div className="footer-small">
-                    <a href="https://mobile.twitter.com/dan_abramov" target="_blank">Twitter</a>
-                    <div> * </div>
-                    <a href="https://github.com/gaearon" target="_blank">Github</a>
-                    <div> * </div>
-                    <a href="https://stackoverflow.com/users/458193/dan-abramov" target="_blank">stack overflow</a>
-                </div>
-                <a href="https://overreacted.io/rss.xml">rss</a>
-            </footer>
+        <Footer />
         </div>
     )
 }
