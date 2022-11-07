@@ -1,7 +1,6 @@
 # Installation 
 
-Follow these steps to setup and run a local instance of HeroSearch
-(You will need node, npm and MySQL already installed)
+Follow these steps to setup and run a local instance of personal-blog
 
 1. Clone and download this repo
 
